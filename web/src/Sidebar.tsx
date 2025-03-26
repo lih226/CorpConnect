@@ -4,6 +4,7 @@ import { RxDashboard } from "react-icons/rx";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { IoPeopleOutline } from "react-icons/io5";
 import { BiBuildingHouse } from "react-icons/bi";
+import { CgProfile } from "react-icons/cg";
 import LogoutButton from './components/LogoutButton';
 
 function Sidebar() {
@@ -32,6 +33,13 @@ function Sidebar() {
                     <BiBuildingHouse size={20} />
                     <IconSpacer />
                     Housing
+                </SidebarLink>
+                <LinkSpacer />
+                <LinkSpacer />
+                <SidebarLink to="/profile">
+                    <CgProfile size={20} />
+                    <IconSpacer />
+                    Profile
                 </SidebarLink>
                 <LinkSpacer />
                 <LogoutButton />
@@ -65,9 +73,10 @@ const SidebarLink = styled(NavLink)`
   height: 3vh;
   opacity: 0.8;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
   border-radius: 8px;
   transition: all 0.3s ease;
+  color: #5a54e8;
 
   &:hover {
     background-color:rgba(0, 0, 0, 0.10);

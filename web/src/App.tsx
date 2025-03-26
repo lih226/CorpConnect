@@ -4,6 +4,7 @@ import Community from './pages/Community';
 import DM from './pages/DM';
 import Internship from './pages/Internship';
 import Housing from './pages/Housing';
+import Profile from './pages/Profile';
 import styled, { createGlobalStyle } from 'styled-components';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/directmessage" element={<DM />} />
           <Route path="/internship" element={<Internship />} />
           <Route path="/housing" element={<Housing />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Content>
     </Router>
