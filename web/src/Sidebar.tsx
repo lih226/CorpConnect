@@ -23,10 +23,10 @@ function Sidebar() {
                     Direct Message
                 </SidebarLink>
                 <LinkSpacer />
-                <SidebarLink to="/internship">
+                <SidebarLink to="/explore">
                     <IoPeopleOutline size={20} />
                     <IconSpacer />
-                    Internship
+                    Explore
                 </SidebarLink>
                 <LinkSpacer />
                 <SidebarLink to="/housing">

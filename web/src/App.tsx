@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Community from './pages/Community';
 import DM from './pages/DM';
-import Internship from './pages/Internship';
+import Explore from './pages/Explore';
 import Housing from './pages/Housing';
 import Profile from './pages/Profile';
 import styled, { createGlobalStyle } from 'styled-components';
@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Community />} />
           <Route path="/directmessage" element={<DM />} />
-          <Route path="/internship" element={<Internship />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/housing" element={<Housing />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
