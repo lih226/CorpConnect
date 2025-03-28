@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 type Props = {
     name: string;
-    description?: string;
+    description: string;
     banner?: string;
     tags?: string[];
     numMember?: number;
