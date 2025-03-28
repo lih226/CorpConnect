@@ -27,9 +27,14 @@ function MyCommunityCard({ name, banner, message, username, time, channel, unrea
                 </BannerContainer>
                 <TextContainer isUnread={!!unread} muted={!!mute}>
                     <Name>{name}</Name>
-                    {formattedTime && <TimeText>{formattedTime}</TimeText>}
-                    {channel && <ChannelText>#{channel}</ChannelText>}
-                    {username && message && <Message>{username}: {message}</Message>}
+                    
+                    {/* Row for channel and time */}
+                    <ChannelTimeRow>
+                        {channel && <ChannelText>#{channel}</ChannelText>}
+                        {formattedTime && <TimeText>{formattedTime}</TimeText>}
+                    </ChannelTimeRow>
+                    
+                    {username && message && <Message><Username>{username}:</Username> {message}</Message>}
                     {mute && <IoNotificationsOff style={{ position: 'absolute', top: 15, right: 15, color: 'gray' }} size={20} />}
                 </TextContainer>
             </CardContainer>
@@ -73,19 +78,38 @@ const TextContainer = styled.div<{ isUnread: boolean; muted?: boolean }>`
 
 const Name = styled.div`
   font-size: 24px;
+  margin-bottom: 5px;
 `;
 
-const TimeText = styled.div`
-  font-size: 14px;
-  color: gray;
+// New row component to hold channel and time side by side
+const ChannelTimeRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
 `;
 
 const ChannelText = styled.div`
   font-size: 14px;
 `;
 
+const TimeText = styled.div`
+  font-size: 14px;
+  color: gray;
+  text-align: right;
+`;
+
+const Username = styled.span`
+  font-weight: 400;
+`;
+
 const Message = styled.div`
   font-size: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const Unread = styled.div`

@@ -131,6 +131,11 @@ const Name = styled.div`
 
 const Description = styled.div`
   font-size: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 const TagContainer = styled.div`
