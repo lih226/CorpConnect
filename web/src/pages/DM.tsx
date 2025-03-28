@@ -57,7 +57,7 @@ function DM() {
   };
 
   return (
-    <div style={{ display: "flex", height: "100vh" }}>
+    <div style={{ display: "flex", height: "calc(100vh - 100px)" }}>
       {/* Left sidebar for DM cards */}
       <div
         style={{
@@ -65,7 +65,7 @@ function DM() {
           padding: "20px",
           borderRight: "1px solid #ddd",
           backgroundColor: "#f4f4f4",
-          height: "100vh", // Ensure it takes full height
+          height: "100%",
           overflowY: "auto",
         }}
       >
@@ -96,7 +96,7 @@ function DM() {
           padding: "20px",
           borderLeft: "1px solid #ddd",
           overflowY: "auto",
-          height: "100vh",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
         }}

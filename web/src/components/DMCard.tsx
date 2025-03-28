@@ -24,13 +24,13 @@ function DMCard({ name, profilePic, lastMessage, onSelect }: DMCardProps) {
 const CardContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 250px; /* Fixed width for each DM card */
+  width: 229px; /* Fixed width for each DM card */
   background-color: white;
   border-radius: 12px;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
   cursor: pointer;
-  margin-bottom: 10px; /* Optional: adds space between each DMCard */
+  margin-bottom: 10px; /* Adds space between each DMCard */
   &:hover {
     background-color: #f0f0f0;
   }

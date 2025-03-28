@@ -11,34 +11,29 @@ function Sidebar() {
     return (
         <>
             <SidebarContainer>
-                <div style={{ fontSize: '26px' }}>CorpConnect</div>
                 <SidebarLink to="/" end>
                     <RxDashboard size={20} />
-                    <IconSpacer />
                     Community
                 </SidebarLink>
+                <LinkSpacer />
                 <SidebarLink to="/directmessage" end>
                     <IoChatbubblesOutline size={20} />
-                    <IconSpacer />
-                    Direct Message
+                    DMs
                 </SidebarLink>
                 <LinkSpacer />
                 <SidebarLink to="/explore">
                     <IoPeopleOutline size={20} />
-                    <IconSpacer />
                     Explore
                 </SidebarLink>
                 <LinkSpacer />
                 <SidebarLink to="/housing">
                     <BiBuildingHouse size={20} />
-                    <IconSpacer />
                     Housing
                 </SidebarLink>
                 <LinkSpacer />
                 <LinkSpacer />
                 <SidebarLink to="/profile">
                     <CgProfile size={20} />
-                    <IconSpacer />
                     Profile
                 </SidebarLink>
                 <LinkSpacer />
@@ -53,43 +48,41 @@ const SidebarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 17vw;
-  min-width: 150px;
-  height: 100vh;
+  width: 75px;
+  min-width: 75px;
+  height: calc(100vh - 60px); /* Subtract top bar height */
   background-color: #f5f5f5;
   position: fixed;
-  top: 0;
+  top: 60px; /* Start below the top bar */
   left: 0;
   transition: left 0.3s ease;
   padding-top: 20px;
-  z-index: 1000;
+  z-index: 900;
 `;
 
 const SidebarLink = styled(NavLink)`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 2vh;
-  width: 13vw;
-  height: 3vh;
+  padding: 1.75vh;
+  width: 35px;
+  height: 35px;
   opacity: 0.8;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: 400;
   border-radius: 8px;
   transition: all 0.3s ease;
   color: #5a54e8;
 
   &:hover {
-    background-color:rgba(0, 0, 0, 0.10);
+    background-color: rgba(0, 0, 0, 0.10);
   }
 
   &.active {
     background-color: #5a54e8;
     color: white;
   }
-`;
-
-const IconSpacer = styled.div`
-    width: 12px;
 `;
 
 const LinkSpacer = styled.div`

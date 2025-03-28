@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './Sidebar';
+import TopBar from './components/TopBar';
 import Community from './pages/Community';
 import DM from './pages/DM';
 import Explore from './pages/Explore';
@@ -13,6 +14,7 @@ function App() {
     <Router>
       <GlobalStyle />
       <Sidebar />
+      <TopBar />
       <Content>
         <Routes>
           <Route path="/" element={<Community />} />
@@ -32,13 +34,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Outfit', sans-serif;
     font-weight: 300;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
   }
 `;
 
-// Style so it's ~150px to the left (from Sidebar)
+// Style so content is positioned correctly with both sidebar and top bar
 const Content = styled.div`
-  margin-left: 17vw;
-  padding: 20px;
+  margin-left: 75px;
+  margin-top: 60px;
 `;
 
 export default App;

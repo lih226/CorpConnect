@@ -82,6 +82,7 @@ const Image = styled.img`
     width: 100%;
     height: 175px;
     border-radius: 12px 12px 0 0;
+    object-fit: cover;
 `;
 
 const Row = styled.div`

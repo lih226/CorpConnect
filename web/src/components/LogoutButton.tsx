@@ -17,7 +17,6 @@ function LogoutButton() {
     return (
         <StyledButton onClick={handleLogout}>
             <IoLogOutOutline size={20} />
-            <IconSpacer />
             Logout
         </StyledButton>
     );
@@ -25,30 +24,26 @@ function LogoutButton() {
 
 const StyledButton = styled.button`
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 2vh;
-    width: 13vw;
-    height: 5vh;
+    padding: 1.75vh;
+    width: 35px;
+    height: 35px;
     opacity: 0.8;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: 400;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    background: transparent;
-    color: inherit;
     border: none;
-    font-weight: 300;
-    margin: 0;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    color: black;
     cursor: pointer;
-    text-align: left;
+    box-sizing: content-box;
 
     &:hover {
         background-color: rgba(0, 0, 0, 0.10);
     }
-`;
-
-const IconSpacer = styled.div`
-    width: 12px;
 `;
 
 export default LogoutButton;
